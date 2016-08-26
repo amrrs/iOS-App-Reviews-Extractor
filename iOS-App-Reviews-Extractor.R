@@ -19,8 +19,6 @@ json_url <- paste0('http://itunes.apple.com/gb/rss/customerreviews/page=',page_n
 xml_url <- paste0('http://itunes.apple.com/gb/rss/customerreviews/page=',page_num,'/id=',app_id,'/sortby=mostrecent/','xml')
 
 
-#json_url <- 'http://itunes.apple.com/gb/rss/customerreviews/id=370901726/sortBy=mostRecent/json'
-
 js <- fromJSON(json_url)
 
 #extracting selected columns from json 
@@ -33,7 +31,6 @@ names(reviews) <- c('Title','Author_URL','Author_Name','App_Version','Rating','R
 
 #reading xml for date
 
-#xml_url <- 'http://itunes.apple.com/gb/rss/customerreviews/id=370901726/sortBy=mostRecent/xml'
 
 xml_n <- read_xml(xml_url)
 
