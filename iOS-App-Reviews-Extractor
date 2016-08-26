@@ -12,6 +12,7 @@ extract_reviews <- function(app_id,page_num){
 
 #building_url
 
+#this extracts all reviews from UK (Great Britain) for other countries replace 'gb' in the below urls with desired country code eg: 'us' or 'in'
 
 json_url <- paste0('http://itunes.apple.com/gb/rss/customerreviews/page=',page_num,'/id=',app_id,'/sortby=mostrecent/','json')
   
